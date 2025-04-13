@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">sample app</string>
+    <string name="prefs_name">sample_prefs</string>
+    <string name="title_file">File</string>
+    <string name="title_key_value">Key-Value</string>
+    <string name="message">After adding a key-value to SharedPreferences, please restart the app and shake your device.</string>
+    <string name="button">Add key-value</string>
+</resources>
