@@ -5,8 +5,8 @@ plugins {
     `maven-publish`
 }
 
-group = "io.github.yass97"
-version = "1.0.0"
+group = "com.github.yass97"
+version = "1.0.1"
 
 android {
     namespace = "io.github.yass97.lib"
