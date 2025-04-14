@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    `maven-publish`
 }
 
 group = "io.github.yass97"
@@ -33,6 +34,29 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    publishing {
+        singleVariant("release")
+    }
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = project.group as String
+            artifactId = "prefs-shaker"
+            version = project.version as String
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+        repositories {
+            maven {
+                name = "repo"
+                url = uri(layout.buildDirectory.dir("repo"))
+            }
+        }
     }
 }
 
