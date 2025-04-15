@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 ### build.gradle.kts
 ```kotlin
 dependencies {
-    debugImplementation("com.github.yass97:prefs-shaker:<version>")
+    implementation("com.github.yass97:prefs-shaker:<version>")
 }
 ```
 
@@ -34,8 +34,7 @@ If your project is using only Material 2 (`androidx.compose.material`), please a
 
 ```kotlin
 dependencies {
-    debugImplementation("com.github.yass97:prefs-shaker:<version>")
-    debugImplementation("androidx.compose.material3:material3:<version>")
+    implementation("androidx.compose.material3:material3:<version>")
 }
 ```
 
